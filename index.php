@@ -12,93 +12,52 @@
 											<h2>My Portfolio</h2>
 										</header>
 										<div class="row">
-											<div class="4u 12u(mobile)">
-												<section class="box">
 
-													<!-- Agrego la ubicacion de cada imagen -->
-													<a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic02.jpg" alt="" /></a>
-													<header>
-														<h3>Ipsum feugiat et dolor</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											<div class="4u 12u(mobile)">
-												<section class="box">
 
-													<!-- Agrego la ubicacion de cada imagen -->
-													<a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic03.jpg" alt="" /></a>
-													<header>
-														<h3>Sed etiam lorem nulla</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											<div class="4u 12u(mobile)">
-												<section class="box">
+											<?php  
+												// Comienzo a reemplazar el contenido estatico de las entradas
+												// El contenido se mostrara de acuerdo a las categorias
 
-													<!-- Agrego la ubicacion de cada imagen -->
-													<a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic04.jpg" alt="" /></a>
-													<header>
-														<h3>Consequat et tempus</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-										</div>
-										<div class="row">
-											<div class="4u 12u(mobile)">
-												<section class="box">
 
-													<!-- Agrego la ubicacion de cada imagen -->
-													<a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic05.jpg" alt="" /></a>
-													<header>
-														<h3>Blandit sed adipiscing</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											<div class="4u 12u(mobile)">
-												<section class="box">
+												// En este caso se usa query_posts porque recibe algunos parametros que se puede modificar dependiendo de lo que se quiera usar
+												query_posts(
+													array(
+														'showposts' => 6, // La cantidad a mostrar
+														'cat' => 3		  // La categoria y el id (tambien puede ser por el slug de la categoria)
+													)
+												);
 
-													<!-- Agrego la ubicacion de cada imagen -->
-													<a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic06.jpg" alt="" /></a>
-													<header>
-														<h3>Etiam nisl consequat</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											<div class="4u 12u(mobile)">
-												<section class="box">
+												?>
 
-													<!-- Agrego la ubicacion de cada imagen -->
-													<a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic07.jpg" alt="" /></a>
-													<header>
-														<h3>Dolore nisl feugiat</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-										</div>
+											<?php 
+												if ( have_posts() ) :
+													while ( have_posts() ) : the_post(); ?>
+														
+														<div class="4u 12u(mobile)">
+															<section class="box">
+
+																<!-- Agrego la ubicacion de cada imagen -->
+																<a href="<?php the_permalink(); ?>" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic02.jpg" alt="" /></a>
+																<header>
+																	<h3><?php the_title(); ?></h3>
+																</header>
+																<p><?php the_excerpt(); ?></p> <!-- El extracto del articulo -->
+																<footer>
+																	<a href="<?php the_permalink(); ?>" class="button alt">Find out more</a>
+																</footer>
+															</section>
+														</div>
+
+													<?php endwhile; ?>
+													<!-- post navigation -->
+												<?php else: ?>
+													
+													<h3>No se encontro nada para mostrar</h3>
+
+												<?php endif; ?>
+											?>
+
+
 									</section>
 
 							</div>
