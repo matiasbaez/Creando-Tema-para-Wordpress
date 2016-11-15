@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 	
 			<!-- Main -->
 				<div id="main-wrapper">

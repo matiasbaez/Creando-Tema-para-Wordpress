@@ -27,10 +27,14 @@
 					<div id="header">
 
 						<!-- Logo -->
-							<h1><a href="index.html">Dopetrope</a></h1>
+
+							<!-- Modifico el enlace y el logo con la funcion -->
+							<h1><a href="<?php home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 
 						<!-- Nav -->
-							<nav id="nav">
+						<!-- 	
+						La parte estatica ya se puede eliminar
+						<nav id="nav">
 								<ul>
 									<li class="current"><a href="index.html">Home</a></li>
 									<li>
@@ -56,7 +60,19 @@
 									<li><a href="right-sidebar.html">Right Sidebar</a></li>
 									<li><a href="no-sidebar.html">No Sidebar</a></li>
 								</ul>
-							</nav>
+							</nav> -->
+
+						<?php    
+
+							// Comienzo a reemplazar el menu estatico
+
+							$args = array(
+								'theme_location' => 'principal', // Donde se va a ubicar el menu
+								'container' => 'nav', // El contenedor de todo el menu
+								'container_id' => 'nav', // El id del menu
+							);
+						
+							wp_nav_menu( $args ); ?>
 
 						<!-- Banner -->
 							<section id="banner">

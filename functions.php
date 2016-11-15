@@ -3,6 +3,15 @@
 	//Creo el archivo de funciones
 
 
+	// Registro el menu para poder usar
+	register_nav_menus( 
+		array(
+			'principal' => 'Menu Principal', // La ubicacion y el nombre del menu
+			'footer' => 'Menu Footer'
+		)
+	);
+
+
 	/* Otra forma de agregar los estilos y scripts, etc
 	   Ahora se utilizara los HOOCK ACTIONS
 	   hook action == add_action() */
