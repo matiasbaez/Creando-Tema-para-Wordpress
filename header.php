@@ -31,38 +31,8 @@
 							<!-- Modifico el enlace y el logo con la funcion -->
 							<h1><a href="<?php home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 
-						<!-- Nav -->
-						<!-- 	
-						La parte estatica ya se puede eliminar
-						<nav id="nav">
-								<ul>
-									<li class="current"><a href="index.html">Home</a></li>
-									<li>
-										<a href="#">Dropdown</a>
-										<ul>
-											<li><a href="#">Lorem ipsum dolor</a></li>
-											<li><a href="#">Magna phasellus</a></li>
-											<li><a href="#">Etiam dolore nisl</a></li>
-											<li>
-												<a href="#">Phasellus consequat</a>
-												<ul>
-													<li><a href="#">Magna phasellus</a></li>
-													<li><a href="#">Etiam dolore nisl</a></li>
-													<li><a href="#">Veroeros feugiat</a></li>
-													<li><a href="#">Nisl sed aliquam</a></li>
-													<li><a href="#">Dolore adipiscing</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Veroeros feugiat</a></li>
-										</ul>
-									</li>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">No Sidebar</a></li>
-								</ul>
-							</nav> -->
 
-						<?php    
+						<?php
 
 							// Comienzo a reemplazar el menu estatico
 
@@ -72,7 +42,8 @@
 								'container_id' => 'nav', // El id del menu
 							);
 						
-							wp_nav_menu( $args ); ?>
+							wp_nav_menu( $args );
+						?>
 
 						<!-- Banner -->
 							<section id="banner">
