@@ -1,16 +1,22 @@
-<!DOCTYPE HTML>
-<!--
-	Dopetrope by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+
+<html <?php language_attributes(); ?> >
 	<head>
-		<title>Dopetrope by HTML5 UP</title>
-		<meta charset="utf-8" />
+
+		<!-- Muestro el titulo configurado en el wordpress -->
+		<title><?php bloginfo('name'); ?></title>
+
+		<!-- Configuro el Meta Charset con la funcion de Wordpress -->
+		<meta charset="<?php bloginfo('charset'); ?>" />
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+
+		<!-- Configuro para que cargue los estilos -->
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
+		
+
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 
