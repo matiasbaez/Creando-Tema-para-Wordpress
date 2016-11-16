@@ -34,10 +34,17 @@
 														<div class="4u 12u(mobile)">
 															<section class="box">
 
-																<!-- Agrego la ubicacion de la imagen del articulo
-																	 de momento con el bloginfo hasta que se active
-																	 la funcion de las imagenes -->
-																<a href="<?php the_permalink(); ?>" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic02.jpg" alt="" /></a>
+																<!-- Agrego la imagen de forma dinamica -->
+																<a href="<?php the_permalink(); ?>" class="image featured">
+																	
+																	<?php // Si la ENTRADA tiene imagen se muestra
+																		if ( has_post_thumbnail() ) {
+																			the_post_thumbnail('vista-previa-entrada');
+																			// Recibe como parametro el nombre del tamaño de la imagen que se configuro
+																		} 
+																	?>
+
+																</a>
 																<header>
 																	<h3><?php the_title(); ?></h3>
 																</header>
@@ -89,14 +96,22 @@
 													<div class="6u 12u(mobile)">
 														<section class="box">
 
-															<!-- Agrego la ubicacion de la imagen, de momento con bloginfo -->
-															<a href="<?php the_permalink(); ?>" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic08.jpg" alt="" /></a>
+															<!-- Agrego la imagen de forma dinamica -->
+															<a href="<?php the_permalink(); ?>" class="image featured">
+																
+																<?php
+																	if ( has_post_thumbnail() ) {
+																		the_post_thumbnail('miniatura-blog');
+																	} 
+																?>
+
+															</a>
 															<header>
 																<h3><?php the_title(); ?></h3>
 																<p><?php the_ ?>Posted 45 minutes ago</p>
 															</header>
 															
-															<?php the_content(); // El contenido ?>
+															<?php the_excerpt(); // El contenido ?>
 
 															<footer>
 																<ul class="actions">

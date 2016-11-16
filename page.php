@@ -10,8 +10,7 @@
 						<!-- Content -->
 
 						<!-- Si encuentra articulos -->
-						<?php if ( have_posts() ) : 
-								while ( have_posts() ) : the_post(); ?>
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 								<article class="box post">
 									<a href="#" class="image featured"><img src="<?php bloginfo('template_url'); ?>/images/pic01.jpg" alt="" /></a>

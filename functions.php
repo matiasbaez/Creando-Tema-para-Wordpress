@@ -12,6 +12,20 @@
 	);
 
 
+	// Activo el soporte para las imagenes de las ENTRADAS O PUBLICACIONES
+
+	if ( function_exists('add_theme_support')) {
+		add_theme_support( 'post-thumbnails' ); // Con esta linea se activa
+
+		//set_post_thumbnail_size(150, 150, true);
+
+		// Agrego un tamaño de imagen de acuerdo al que quiero usar
+		add_image_size('vista-previa-entrada', 374, 260, true); // Nombre, ancho, alto, recortado?;
+		add_image_size('vista-lectura-entrada', 783, 290, true); // Nombre, ancho, alto, recortado?;
+		add_image_size('miniatura-blog', 580, 272, true); // Nombre, ancho, alto, recortado?;
+	}
+
+
 	/* Otra forma de agregar los estilos y scripts, etc
 	   Ahora se utilizara los HOOCK ACTIONS
 	   hook action == add_action() */

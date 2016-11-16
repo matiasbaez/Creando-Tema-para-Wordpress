@@ -41,14 +41,19 @@
 							<div class="8u 12u(mobile) important(mobile)">
 
 								<!-- Content -->
-								<?php 
-									if ( have_posts() ) :
-										while ( have_posts() ) : the_post(); ?>
+								<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 											
 											<article class="box post">
 
 												<!-- De momento se cargan las imagenes con el bloginfo -->
-												<a href="<?php the_permalink(); ?>" class="image featured"><img src="<?php bloginfo('template_url'); ?>/images/pic01.jpg" alt="" /></a>
+												<a href="<?php the_permalink(); ?>" class="image featured">
+													<?php
+														if ( has_post_thumbnail() ) {
+															the_post_thumbnail('vista-lectura-entrada');
+														} 
+													?>
+																
+												</a>
 												<header>
 													<h2><?php the_title(); ?></h2>
 													<!--p>Lorem ipsum dolor sit amet feugiat</p-->
