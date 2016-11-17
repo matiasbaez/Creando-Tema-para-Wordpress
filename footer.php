@@ -60,23 +60,15 @@
 								<!-- Agrego el widget de las ultimas entradas -->
 								<section>
 									<ul class="divided">
-										<?php dynamic_sidebar('Entradas Recientes Footer'); ?>
+										<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Entradas Recientes Footer') ) : endif //Correct form to use?> 
 									</ul>
 								</section>
 							</div>
 
 							<div class="4u 12u(mobile)">
 								<section>
-									<header>
-										<h2>Ipsum et phasellus</h2>
-									</header>
 									<ul class="divided">
-										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+									<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Ultimas Categorias Footer') ) : endif ?>
 									</ul>
 								</section>
 							</div>

@@ -14,18 +14,24 @@
 
 	// Activo el soporte para los Widgets
 	if (function_exists('register_sidebar')) { // Si existe la funcion
-		$args = array(
-			'name'          => __( 'Entradas Recientes Footer', 'Matias Baez' ), // El nombre del sidebar
-			'id'            => 'unique-sidebar-id',
-			'description'   => '',
-			'class'         => '',
-			'before_widget' => '',
-			'after_widget'  => '',
-			'before_title'  => '<header><h2>',
-			'after_title'   => '</h2></header>'
-		);
 	
-		register_sidebar( $args );
+		register_sidebar( // Registro un sidebar | Ahora ago asi porque voy a usar varios 
+
+			array(
+				'name'          => 'Entradas Recientes Footer', // El nombre del sidebar
+				'before_title'  => '<header><h2>',
+				'after_title'   => '</h2></header>'
+				// Y dejo solo lo que voy a usar
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name' => 'Ultimas Categorias Footer',
+				'before_title'  => '<header><h2>',
+				'after_title'   => '</h2></header>'
+			)
+		);
 	}
 
 	// Activo el soporte para las imagenes de las ENTRADAS O PUBLICACIONES
