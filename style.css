@@ -1174,6 +1174,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		margin-bottom: 2em;
 	}
 
+	.slider {
+		margin-top: 30px;
+	}
+
 /* Form */
 
 	form label {
@@ -2564,4 +2568,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 					padding: 0.75em 1.25em 0.75em 1.25em;
 				}
 
+	}
+
+	#header-wrapper {
+		padding-bottom: 1em;
 	}

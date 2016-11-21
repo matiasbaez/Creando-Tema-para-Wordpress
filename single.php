@@ -61,6 +61,9 @@
 												
 												<?php the_content(); // El contenido de la Entrada ?>
 
+												<!-- Comentarios -->
+												<?php comments_template(); ?>
+
 											</article>
 
 										<?php endwhile; ?>

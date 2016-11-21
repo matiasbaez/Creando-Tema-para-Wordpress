@@ -45,17 +45,13 @@
 							wp_nav_menu( $args );
 						?>
 
-						<!-- Banner -->
-							<section id="banner2">
-								<!-- <header>
-									<h2>Howdy. This is Dopetrope.</h2>
-									<p>A responsive template by HTML5 UP</p>
-								</header> -->
+						<!-- Slide -->
+							<section class="slider">
 								<?php echo do_shortcode("[metaslider id=72]"); ?>
 							</section>
 
 						<!-- Intro -->
-							<section id="intro" class="container">
+							<!-- <section id="intro" class="container">
 								<div class="row">
 									<div class="4u 12u(mobile)">
 										<section class="first">
@@ -88,10 +84,10 @@
 								<footer>
 									<ul class="actions">
 										<li><a href="#" class="button big">Get Started</a></li>
-										<li><a href="#" class="button alt big">Learn More</a></li>
+										<li><a href="#" class="button alt big">Leer Mas</a></li>
 									</ul>
 								</footer>
-							</section>
+							</section> -->
 
 					</div>
 				</div>

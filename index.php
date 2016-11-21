@@ -9,7 +9,7 @@
 							<!-- Portfolio -->
 							<section>
 								<header class="major">
-									<h2>My Portfolio</h2>
+									<h2>Portafolio</h2>
 								</header>
 									
 								<div class="row">
@@ -47,14 +47,14 @@
 											</a>
 													
 											<header>
-												<h3><?php the_title(); ?></h3>
+												<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 											</header>
 															
 											<!-- El extracto del articulo -->
 											<p><?php the_excerpt(); ?></p> 
 																
 											<footer>
-												<a href="<?php the_permalink(); ?>" class="button alt">Find out more</a>
+												<a href="<?php the_permalink(); ?>" class="button alt">Leer Mas</a>
 											</footer>
 										</section>
 									</div>
@@ -81,7 +81,7 @@
 							<!-- Blog -->
 							<section>
 								<header class="major">
-									<h2>The Blog</h2>
+									<h2>Blog</h2>
 								</header>
 									
 								<div class="row">
@@ -123,8 +123,8 @@
 
 											<footer>
 												<ul class="actions">
-													<li><a href="<?php the_permalink(); ?>" class="button icon fa-file-text">Continue Reading</a></li>
-													<li><a href="#" class="button alt icon fa-comment">33 comments</a></li>
+													<li><a href="<?php the_permalink(); ?>" class="button icon fa-file-text">Leer Mas</a></li>
+													<li><a href="#" class="button alt icon fa-comment">33 comentarios</a></li>
 												</ul>
 											</footer>
 										</section>
