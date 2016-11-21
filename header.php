@@ -46,11 +46,12 @@
 						?>
 
 						<!-- Banner -->
-							<section id="banner">
-								<header>
+							<section id="banner2">
+								<!-- <header>
 									<h2>Howdy. This is Dopetrope.</h2>
 									<p>A responsive template by HTML5 UP</p>
-								</header>
+								</header> -->
+								<?php echo do_shortcode("[metaslider id=72]"); ?>
 							</section>
 
 						<!-- Intro -->

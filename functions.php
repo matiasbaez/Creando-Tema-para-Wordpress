@@ -6,7 +6,7 @@
 	// Registro el menu para poder usar
 	register_nav_menus( 
 		array(
-			'principal' => 'Menu Principal', // La ubicacion y el nombre del menu
+			'principal' => 'Menu CaacupeWeb', // La ubicacion y el nombre del menu
 			'footer' => 'Menu Footer'
 		)
 	);
@@ -14,7 +14,7 @@
 
 	// Activo el soporte para los Widgets
 	if (function_exists('register_sidebar')) { // Si existe la funcion
-	
+		
 		register_sidebar( // Registro un sidebar | Ahora ago asi porque voy a usar varios 
 
 			array(
@@ -72,6 +72,5 @@
 	}
 
 	add_action( 'wp_enqueue_scripts', 'recursos_del_tema' );
-
 
 ?>
